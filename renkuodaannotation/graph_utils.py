@@ -91,15 +91,14 @@ def inspect_oda_graph_inputs(revision, paths, input_notebook: str = None):
             if str(entity_obj.checksum) == str(entity_checksum):
                 # file present on disk based on the checksum equality
                 rdf_nb = ontology.nb2rdf(entity_path)
-                aqs_obj = OdaAnnotation(entity_path)
+
                 G.parse(data=rdf_nb)
                 rdf_jsonld_str = G.serialize(format="json-ld")
                 rdf_jsonld = json.loads(rdf_jsonld_str)
 
                 print(f"\033[32mlog_aqs_annotation\033[0m")
 
-                annotation_folder_path = Path(
-                    os.path.join(aqs_obj.oda_metadata_path, entity_file_name, entity_checksum))
+                annotation_folder_path = Path(os.path.join(aqs_obj.oda_metadata_path, entity_file_name, entity_checksum))
                 if annotation_folder_path.exists():
                     # directory gets cleaned-up in order to avoid to generate duplicate jsonld files
                     # that can occur in case of new commits where input notebook is not affected

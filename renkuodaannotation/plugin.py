@@ -31,7 +31,7 @@ from renku.domain_model.project_context import project_context
 from renku.core.plugin import hookimpl
 from aqsconverters.io import ODA_ANNOTATION_DIR, COMMON_DIR
 from renkuodaannotation.config import ENTITY_METADATA_AQS_DIR
-from renkuodaannotation import graph_utils
+import renkuodaannotation.graph_utils as graph_utils
 from nb2workflow import ontology
 
 
