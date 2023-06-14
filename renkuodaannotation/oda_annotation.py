@@ -26,3 +26,5 @@ class OdaAnnotation(object):
         if path and path.exists():
             return json.load(path.open())
         return {}
+
+    # TODO add annotations property as https://github.com/SwissDataScienceCenter/renku-mls/blob/master/renkumls/plugin.py
