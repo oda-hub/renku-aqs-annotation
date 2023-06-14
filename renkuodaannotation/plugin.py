@@ -148,10 +148,6 @@ aqsconverters.aq.autolog()
 """)
 
 
-def _run_id(activity_id):
-    return str(activity_id).split("/")[-1]
-
-
 @click.group()
 def oda():
     pass

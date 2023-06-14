@@ -1,13 +1,10 @@
 import os
 import rdflib
-import yaml
 import json
 import hashlib
 import glob
-import urllib.request
 
 from prettytable import PrettyTable
-from importlib import resources
 from nb2workflow import ontology
 from pathlib import Path
 
