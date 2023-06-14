@@ -14,6 +14,7 @@ from renku.core.errors import RenkuException
 from renku.core.util.git import get_entity_from_revision
 
 from renkuodaannotation.config import ENTITY_METADATA_AQS_DIR
+from renkuodaannotation.oda_annotation import OdaAnnotation
 
 # TODO improve this
 __this_dir__ = os.path.join(os.path.abspath(os.path.dirname(__file__)))
@@ -36,8 +37,6 @@ def inspect_oda_graph_inputs(revision, paths, input_notebook: str = None):
         paths = project_context.path
 
     graph = _renku_graph(revision, paths)
-
-    metadata_annotation_folder_path = Path(project_context.metadata_path).joinpath(ENTITY_METADATA_AQS_DIR)
 
     query_select = "SELECT DISTINCT ?entityInput ?entityInputLocation ?entityInputChecksum"
 
@@ -93,13 +92,14 @@ def inspect_oda_graph_inputs(revision, paths, input_notebook: str = None):
             if str(entity_obj.checksum) == str(entity_checksum):
                 # file present on disk based on the checksum equality
                 rdf_nb = ontology.nb2rdf(entity_path)
+                oda_annotation_obj = OdaAnnotation(entity_obj)
                 G.parse(data=rdf_nb)
                 rdf_jsonld_str = G.serialize(format="json-ld")
                 rdf_jsonld = json.loads(rdf_jsonld_str)
 
                 print(f"\033[32mlog_aqs_annotation\033[0m")
 
-                annotation_folder_path = metadata_annotation_folder_path.joinpath(entity_file_name).joinpath(entity_checksum)
+                annotation_folder_path = oda_annotation_obj.renku_oda_annotation_path.joinpath(entity_file_name).joinpath(entity_checksum)
                 if annotation_folder_path.exists():
                     # directory gets cleaned-up in order to avoid to generate duplicate jsonld files
                     # that can occur in case of new commits where input notebook is not affected
