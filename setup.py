@@ -37,7 +37,7 @@ packages = find_packages()
 version_file = open('VERSION')
 
 setup(
-    name='renku-oda-annotation',
+    name='renku-aqs-annotation',
     description='Renku AQS plugin',
     keywords='Renku AQS',
     license='Apache License 2.0',
@@ -47,7 +47,7 @@ setup(
     packages=packages,
     entry_points={
         "renku": ["name_of_plugin = renkuodaannotation.plugin"],
-        "renku.cli_plugins": ["oda = renkuodaannotation.plugin:oda"]
+        "renku.cli_plugins": ["aqs = renkuaqsannotation.plugin:aqs"]
     },
     zip_safe=False,
     include_package_data=True,

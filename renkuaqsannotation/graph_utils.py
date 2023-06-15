@@ -12,7 +12,7 @@ from renku.command.graph import export_graph_command
 from renku.core.errors import RenkuException
 from renku.core.util.git import get_entity_from_revision
 
-from renkuodaannotation.oda_annotation import OdaAnnotation
+from renkuaqsannotation.oda_annotation import OdaAnnotation
 
 # TODO improve this
 __this_dir__ = os.path.join(os.path.abspath(os.path.dirname(__file__)))

@@ -4,7 +4,7 @@ from pathlib import Path
 from renku.domain_model.project_context import project_context
 
 from aqsconverters.io import AQS_ANNOTATION_DIR, COMMON_DIR
-from renkuodaannotation.config import ENTITY_METADATA_GRAPHVIS_DIR
+from renkuaqsannotation.config import ENTITY_METADATA_GRAPHVIS_DIR
 
 
 class OdaAnnotation(object):

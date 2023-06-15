@@ -32,8 +32,8 @@ from renku.core.plugin import hookimpl
 from aqsconverters.io import AQS_ANNOTATION_DIR
 from nb2workflow import ontology
 
-from renkuodaannotation.oda_annotation import OdaAnnotation
-import renkuodaannotation.graph_utils as graph_utils
+from renkuaqsannotation.oda_annotation import OdaAnnotation
+import renkuaqsannotation.graph_utils as graph_utils
 
 
 @hookimpl
