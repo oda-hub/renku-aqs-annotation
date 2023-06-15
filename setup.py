@@ -46,7 +46,7 @@ setup(
     install_requires=install_requires,
     packages=packages,
     entry_points={
-        "renku": ["name_of_plugin = renkuodaannotation.plugin"],
+        "renku": ["name_of_plugin = renkuaqsannotation.plugin"],
         "renku.cli_plugins": ["aqs = renkuaqsannotation.plugin:aqs"]
     },
     zip_safe=False,
