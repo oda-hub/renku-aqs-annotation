@@ -13,4 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ENTITY_METADATA_AQS_DIR = 'graphvis'
+ENTITY_METADATA_GRAPHVIS_DIR = 'graphvis'

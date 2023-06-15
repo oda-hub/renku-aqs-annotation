@@ -97,7 +97,7 @@ def inspect_oda_graph_inputs(revision, paths, input_notebook: str = None):
 
                 print(f"\033[32mlog_aqs_annotation\033[0m")
 
-                annotation_folder_path = oda_annotation_obj.aqs_metadata_path.joinpath(entity_file_name).joinpath(entity_checksum)
+                annotation_folder_path = oda_annotation_obj.graphvis_metadata_path.joinpath(entity_file_name).joinpath(entity_checksum)
                 if annotation_folder_path.exists():
                     # directory gets cleaned-up in order to avoid to generate duplicate jsonld files
                     # that can occur in case of new commits where input notebook is not affected

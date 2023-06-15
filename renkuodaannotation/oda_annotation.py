@@ -4,7 +4,7 @@ from pathlib import Path
 from renku.domain_model.project_context import project_context
 
 from aqsconverters.io import AQS_ANNOTATION_DIR, COMMON_DIR
-from renkuodaannotation.config import ENTITY_METADATA_AQS_DIR
+from renkuodaannotation.config import ENTITY_METADATA_GRAPHVIS_DIR
 
 
 class OdaAnnotation(object):
@@ -17,9 +17,9 @@ class OdaAnnotation(object):
         return Path(project_context.metadata_path).joinpath(AQS_ANNOTATION_DIR).joinpath(COMMON_DIR)
 
     @property
-    def aqs_metadata_path(self):
+    def graphvis_metadata_path(self):
         """Return a ``Path`` instance of Renku oda metadata folder."""
-        return Path(project_context.metadata_path).joinpath(AQS_ANNOTATION_DIR)
+        return Path(project_context.metadata_path).joinpath(ENTITY_METADATA_GRAPHVIS_DIR)
 
     def load_model(self, path):
         """Load AQS reference file."""
