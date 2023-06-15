@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from renku.domain_model.project_context import project_context
 
-from aqsconverters.io import ODA_ANNOTATION_DIR, COMMON_DIR
+from aqsconverters.io import AQS_ANNOTATION_DIR, COMMON_DIR
 from renkuodaannotation.config import ENTITY_METADATA_AQS_DIR
 
 
@@ -14,7 +14,7 @@ class OdaAnnotation(object):
     @property
     def renku_oda_annotation_path(self):
         """Return a ``Path`` instance of Renku oda annotation folder."""
-        return Path(project_context.metadata_path).joinpath(ODA_ANNOTATION_DIR).joinpath(COMMON_DIR)
+        return Path(project_context.metadata_path).joinpath(AQS_ANNOTATION_DIR).joinpath(COMMON_DIR)
 
     @property
     def oda_metadata_path(self):

@@ -29,7 +29,7 @@ from pathlib import Path
 from renku.domain_model.provenance.annotation import Annotation
 from renku.domain_model.project_context import project_context
 from renku.core.plugin import hookimpl
-from aqsconverters.io import ODA_ANNOTATION_DIR
+from aqsconverters.io import AQS_ANNOTATION_DIR
 from nb2workflow import ontology
 
 from renkuodaannotation.oda_annotation import OdaAnnotation
@@ -41,7 +41,7 @@ def activity_annotations(activity):
     """``process_run_annotations`` hook implementation."""
     oda_annotation = OdaAnnotation(activity)
 
-    sitecustomize_path = Path(project_context.metadata_path, ODA_ANNOTATION_DIR, "sitecustomize.py")
+    sitecustomize_path = Path(project_context.metadata_path, AQS_ANNOTATION_DIR, "sitecustomize.py")
     if sitecustomize_path.exists():
         sitecustomize_path.unlink()
 

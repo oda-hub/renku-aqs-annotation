@@ -6,14 +6,12 @@ import glob
 
 from prettytable import PrettyTable
 from nb2workflow import ontology
-from pathlib import Path
 
 from renku.domain_model.project_context import project_context
 from renku.command.graph import export_graph_command
 from renku.core.errors import RenkuException
 from renku.core.util.git import get_entity_from_revision
 
-from renkuodaannotation.config import ENTITY_METADATA_AQS_DIR
 from renkuodaannotation.oda_annotation import OdaAnnotation
 
 # TODO improve this
