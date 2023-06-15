@@ -17,9 +17,9 @@ class OdaAnnotation(object):
         return Path(project_context.metadata_path).joinpath(AQS_ANNOTATION_DIR).joinpath(COMMON_DIR)
 
     @property
-    def oda_metadata_path(self):
+    def aqs_metadata_path(self):
         """Return a ``Path`` instance of Renku oda metadata folder."""
-        return Path(project_context.metadata_path).joinpath(ENTITY_METADATA_AQS_DIR)
+        return Path(project_context.metadata_path).joinpath(AQS_ANNOTATION_DIR)
 
     def load_model(self, path):
         """Load AQS reference file."""
