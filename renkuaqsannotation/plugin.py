@@ -129,11 +129,11 @@ aqsconverters.aq.autolog()
 
 
 @click.group()
-def oda():
+def aqs():
     pass
 
 
-@oda.command()
+@aqs.command()
 @click.option(
     "--revision",
     default="HEAD",
@@ -153,7 +153,7 @@ def inspect(revision, paths, input_notebook):
     return ""
 
 
-@oda.command()
+@aqs.command()
 def start_session():
     gitlab_url = subprocess.check_output(["git", "remote", "get-url", "origin"]).decode().strip()
 
