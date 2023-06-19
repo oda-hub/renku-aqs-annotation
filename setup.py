@@ -26,7 +26,7 @@ install_requires = [
     'renku==2.4.1',
     'matplotlib',
     'astroquery @ git+https://github.com/oda-hub/astroquery#egg=astroquery',
-    'aqsconverters @ git+https://github.com/oda-hub/aqsmodel-converters#egg=aqsconverters',
+    'aqsconverters',
     'nb2workflow>=1.3.41',
     'pyvis==0.3.0',
     'pydotplus',
