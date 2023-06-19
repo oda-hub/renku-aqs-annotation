@@ -70,7 +70,7 @@ def activity_annotations(activity):
                 for nb2annotation in rdf_jsonld:
                     # to comply with the terminology
                     nb2annotation["http://odahub.io/ontology#entity_checksum"] = entity.checksum
-                    print(f"found jsonLD annotation:\n", json.dumps(nb2annotation, sort_keys=True, indent=4))
+                    print(f"extracting metadata from the output notebook : {entity.path}\n", json.dumps(nb2annotation, sort_keys=True, indent=4))
                     model_id = nb2annotation["@id"]
                     annotation_id = "{activity}/annotations/aqs/{id}".format(
                         activity=activity.id, id=model_id
