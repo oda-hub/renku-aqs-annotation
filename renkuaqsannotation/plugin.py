@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2020 - Viktor Gal
-# A partnership between École Polytechnique Fédérale de Lausanne (EPFL) and
-# Eidgenössische Technische Hochschule Zürich (ETHZ).
+# Copyright 2020 - Gabriele Barni, Volodymyr Savchenko
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,9 +16,6 @@
 
 import os
 import json
-import re
-import subprocess
-import webbrowser
 import click
 import rdflib
 import rdflib.tools.rdf2dot
