@@ -2,7 +2,7 @@
 
 This renku plugin provides the following functionalities:
 
-* Generate astroquery specific annotations by intercepting the call to the following functions:
+* Generate annotations describing access to astronomical archives and services by intercepting any call to the following methods of `astroquery` classes:
   * query_object
   * get_images
   * query_region
