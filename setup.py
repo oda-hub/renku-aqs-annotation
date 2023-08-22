@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2020 - Viktor Gal
-# A partnership between École Polytechnique Fédérale de Lausanne (EPFL) and
-# Eidgenössische Technische Hochschule Zürich (ETHZ).
+# Gabriele Barni [UniGe], Volodymyr Savchenko [EPFL]
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
