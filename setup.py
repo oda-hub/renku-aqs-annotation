@@ -37,8 +37,8 @@ version_file = open('VERSION')
 
 setup(
     name='renku-aqs-annotation',
-    description='Renku AQS plugin',
-    keywords='Renku AQS',
+    description='Renku AQS annotation plugin',
+    keywords='Renku AQS annotation',
     license='Apache License 2.0',
     author='Gabriele Barni, Volodymyr Savchenko',
     author_email='',

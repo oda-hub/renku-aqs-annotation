@@ -1,4 +1,4 @@
-# renku-oda-annotation
+# renku-aqs-annotation
 
 This renku plugin provides the following functionalities:
 
