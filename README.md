@@ -6,7 +6,8 @@ This renku plugin provides the following functionalities:
   * query_object
   * get_images
   * query_region
-* CLI `inspect` to analyze data analysis notebooks and extract a set of metadata and record it in the local knowledge graph.
+* Generate annotations by analyzing the output notebooks (i.e. activity generations) at the end of each execution
+* CLI `inspect` to analyze input notebooks and extract a set of metadata and record those in the local knowledge graph.
 This is executed by using the [https://github.com/oda-hub/nb2workflow]() library
 * CLI to start a renku session
 
