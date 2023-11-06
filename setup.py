@@ -43,6 +43,7 @@ setup(
     author='Gabriele Barni, Volodymyr Savchenko',
     author_email='',
     install_requires=install_requires,
+    python_requires='>=3.9,<3.12',
     packages=packages,
     entry_points={
         "renku": ["name_of_plugin = renkuaqsannotation.plugin"],
