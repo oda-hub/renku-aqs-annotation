@@ -19,12 +19,23 @@
 from __future__ import absolute_import, print_function
 
 import logging
+
 from . import config
+from .io_utils import gitignore_file
+
 from pip._vendor import pkg_resources
 from renku.version import __version__
 
 
 logging.basicConfig(level="DEBUG")
+
+
+def _ignore_nb2workflow():
+    """Ignore nb2workflow dependency generated folders and files"""
+
+    logging.debug("Ignoring nb2workflow automatically generated folder")
+
+    gitignore_file("**.nb2workflow**")
 
 
 def _check_renku_version():
@@ -40,3 +51,4 @@ def _check_renku_version():
 
 
 _check_renku_version()
+_ignore_nb2workflow()

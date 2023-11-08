@@ -19,13 +19,12 @@ from setuptools import find_packages, setup
 install_requires = [
     'deepdiff',
     'pydotplus',
-    'rdflib',
     'bs4',
-    'renku==2.6.0',
+    'renku==2.7.0',
     'matplotlib',
     'astroquery @ git+https://github.com/oda-hub/astroquery#egg=astroquery',
     'aqsconverters',
-    'nb2workflow>=1.3.41',
+    'nb2workflow[rdf]>=1.3.41',
     'pyvis==0.3.0',
     'pydotplus',
     'lockfile',
@@ -43,6 +42,7 @@ setup(
     author='Gabriele Barni, Volodymyr Savchenko',
     author_email='',
     install_requires=install_requires,
+    python_requires='>=3.9,<3.12',
     packages=packages,
     entry_points={
         "renku": ["name_of_plugin = renkuaqsannotation.plugin"],
