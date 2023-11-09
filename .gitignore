@@ -12,3 +12,6 @@ oda-sdss-clean
 *.egg
 renkuaqs/ontology.ttl
 **dist**
+**lib**
+
+**build**
