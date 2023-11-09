@@ -20,7 +20,7 @@ install_requires = [
     'deepdiff',
     'pydotplus',
     'bs4',
-    'renku==2.6.0',
+    'renku==2.7.0',
     'matplotlib',
     'astroquery @ git+https://github.com/oda-hub/astroquery#egg=astroquery',
     'aqsconverters',
