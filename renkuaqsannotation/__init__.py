@@ -33,9 +33,10 @@ logging.basicConfig(level="DEBUG")
 def _ignore_nb2workflow():
     """Ignore nb2workflow dependency generated folders and files"""
 
-    logging.debug("Ignoring nb2workflow automatically generated folder")
+    logging.debug("Ignoring nb2workflow automatically generated folder and files")
 
     gitignore_file("**.nb2workflow**")
+    gitignore_file("function.xml")
 
 
 def _check_renku_version():
