@@ -20,4 +20,3 @@ def gitignore_file(*args):
             repo = Repo('.')
             repo.index.add(".gitignore")
             repo.index.commit(commit_msg)
-        print(f"lines_to_add: {lines_to_add}\nlines: {lines}\n")
