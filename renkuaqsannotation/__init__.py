@@ -26,14 +26,14 @@ from .io_utils import gitignore_file
 from pip._vendor import pkg_resources
 from renku.version import __version__
 
-
 logging.basicConfig(level="DEBUG")
+logger = logging.getLogger("renku_aqs_annotation")
 
 
 def _ignore_nb2workflow():
     """Ignore nb2workflow dependency generated folders and files"""
 
-    logging.debug("Ignoring nb2workflow automatically generated folder and files")
+    logger.debug("Ignoring nb2workflow automatically generated folder and files")
 
     gitignore_file("**.nb2workflow**", "function.xml")
 
@@ -45,9 +45,9 @@ def _check_renku_version():
     required_version = _package.parsed_version.public
 
     if required_version != __version__:
-        logging.info(f"You are using renku version {__version__}, however version {required_version} "
-                     f"is required for the renku-aqs plugin.\n"
-                     "You should consider install the suggested version.",)
+        logger.info(f"You are using renku version {__version__}, however version {required_version} "
+                    f"is required for the renku-aqs plugin.\n"
+                    "You should consider install the suggested version.",)
 
 
 _check_renku_version()
