@@ -17,7 +17,7 @@ def gitignore_file(*args):
             commit_msg = ", ".join(lines_to_add) + " files added to the .gitignore file"
             with open(".gitignore", "w") as gitignore_file_write:
                 gitignore_file_write.writelines(lines)
-            print(f"lines_to_add: {lines_to_add}\nlines: {lines}\n")
             repo = Repo('.')
             repo.index.add(".gitignore")
             repo.index.commit(commit_msg)
+        print(f"lines_to_add: {lines_to_add}\nlines: {lines}\n")
